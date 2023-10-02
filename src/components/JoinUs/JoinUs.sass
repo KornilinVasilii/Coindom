@@ -1,0 +1,46 @@
+.join-us
+  text-align: center
+  align-items: center
+  margin-top: 100px
+  margin-bottom: 200px
+  position: relative
+  &_title, span
+    text-align: center
+    text-transform: uppercase
+    font-size: 62px
+    font-family: 'Roboto Mono'
+    font-weight: 900
+    
+  &_subtitle  
+    margin-top: 20px
+    margin-bottom: 100px
+    opacity: 0.8
+  &_button
+    padding: 15px 40px
+    color: white
+    border-radius: 30px
+    background: linear-gradient(to right, rgb(47, 5, 255), rgb(252, 58, 181)) 
+    border: none
+    font-weight: 900
+    font-size: 16px
+    cursor: pointer
+  &_button:hover  
+    background: white
+    color: rgb(184, 9, 114)
+
+  &_coin_animate, .join-us_eth_animate
+    animation: UpDown 2s linear infinite
+    position: absolute
+    left: 90px
+    bottom: 0
+    font-size: 3em
+    transform: translate(138px,-260px)
+  @keyframes UpDown 
+    0% 
+      bottom: 0
+    50% 
+      bottom: .5em
+    100% 
+      bottom: 0
+  .join-us_eth_animate
+    transform: translate(655px,-260px)
