@@ -4,14 +4,50 @@
   margin: 0 auto
   display: flex
   justify-content: space-between
+  @media (max-width: 840px) 
+    display: grid
+    grid-template-columns: 1fr 1fr
+    column-gap: 60px 
+  @media (max-width: 640px)
+    column-gap: 80px 
+  @media (max-width: 570px) 
+    display: flex
+    flex-direction: column
+    width: 80%
   &_block
     display: flex
     flex-direction: column
     gap: 8px
     text-align: center
+    @media (max-width: 840px)
+      gap: 15px
+      margin-bottom: 30px 
+      margin-top: 30px
+    @media (max-width: 570px)
+      display: flex
+      flex-direction: row   
+      margin-bottom: 10px 
+      margin-top: 10px
+      // border-bottom: 0.5px solid white
   &_price
     display: flex
     gap: 8px  
+    @media (max-width: 840px) 
+      margin: 0 auto
+    @media (max-width: 570px) 
+      margin-left: 0
+  &_img 
+    margin: 0 auto    
+    height: 65px
+    width: 65px
+    @media (max-width: 570px) 
+      height: 25px
+      width: 25px
+      margin: 0
+      margin-top: auto
+    @media (max-width: 470px)   
+      height: 18px
+      width: 18px
 .red
   color: red  
 .green
