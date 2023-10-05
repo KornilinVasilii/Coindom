@@ -13,4 +13,44 @@
     display: flex
     gap: 10px  
     cursor: pointer
+    @media (max-width: 576px) 
+      display: none
+.header-nav
+  min-width: 280px
+  @media (max-width: 576px) 
+    position: fixed
+    top: 0
+    left: -300px 
+    z-index: 9999
+    display: flex
+    flex-direction: column
+    width: 200px
+    height: 100%
+    background: linear-gradient(rgb(27, 17, 77),300px, black) no-repeat
+    border-top-right-radius: 16px
+    border-bottom-right-radius: 16px
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25)
+    transition: transform 0.3s linear
+  &_list
+    display: flex
+    justify-content: space-between
+    @media (max-width: 576px) 
+      display: flex
+      flex-direction: column
+      padding: 40px
+      margin-left: 0
+  &_link
+    text-decoration: none
+    color: white 
+    font-weight: 600
+    @media (max-width: 576px) 
+      margin: 10px 0
+      margin-left: 0
+      text-align: center
+  
+.header-nav.active 
+  transform: translateX(100%)  
+ 
+ 
+
 

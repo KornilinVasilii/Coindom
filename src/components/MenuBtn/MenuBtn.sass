@@ -1,0 +1,136 @@
+.header__menu_btn 
+  display: none
+  @media (max-width: 576px) 
+    display: block
+    position: relative
+    margin-left: auto
+    width: 28px
+    height: 24px
+    background-color: transparent
+    border: 0
+    padding: 0
+    cursor: pointer
+.header__menu_btn::before,
+.header__menu_btn span,  
+.header__menu_btn::after 
+    display: block
+    content: ''
+    position: absolute
+    left: 0
+    top: calc(50% - 2px)
+    width: 28px
+    height: 4px
+    background-color: #fff
+    transform-origin: 50% 50% 
+    border-radius: 3px
+
+.header__menu_btn::before 
+    transform: translateY(-10px)
+  
+.header__menu_btn::after 
+    transform: translateY(10px)
+  
+
+.header__menu_btn.active::before 
+    animation: moveTopLine 0.4s forwards
+  
+.header__menu_btn.active span 
+    animation: moveMidleLine 0.4s forwards
+  
+.header__menu_btn.active::after 
+    animation: moveBotLine 0.4s forwards
+  
+.header__menu_btn.unactive::before 
+    animation: moveTopLineRev 0.4s forwards
+  
+.header__menu_btn.unactive span 
+    animation: moveMidleLineRev 0.4s forwards
+  
+.header__menu_btn.unactive::after 
+    animation: moveBotLineRev 0.4s forwards
+  
+
+@keyframes moveTopLine 
+    0% 
+       transform: scale(1) translateY(-10px)
+    
+    25% 
+       transform: scale(1.5) translateY(-11px)
+    
+    50% 
+       transform: scale(1) translateY(-10px)
+    
+    75% 
+       transform: scale(1) translateY(0)
+    
+    100% 
+       transform: scale(1) translateY(0) rotate(-45deg)
+    
+  
+@keyframes moveMidleLine 
+       0% 
+         transform: scale(1)
+       25% 
+         transform: scale(1.5) 
+       50% 
+         transform: scale(1)
+         opacity: 1
+       75% 
+         opacity: 0
+       100% 
+         opacity: 0
+       
+  
+@keyframes moveBotLine 
+       0% 
+         transform: scale(1) translateY(10px)
+       25% 
+         transform: scale(1.5) translateY(11px)
+       50% 
+         transform: scale(1) translateY(10px)
+       75% 
+         transform: scale(1) translateY(0)
+       100% 
+         transform: scale(1) translateY(0) rotate(45deg)
+       
+  
+
+@keyframes moveTopLineRev 
+            0% 
+                transform: scale(1) translateY(0) rotate(-45deg)  
+            25% 
+                transform: scale(1.5) translateY(0) rotate(-45deg)
+            50% 
+                transform: scale(1) translateY(0) rotate(-45deg)
+            75% 
+                transform: scale(1) translateY(0) rotate(0)
+            100% 
+                transform: scale(1) translateY(-10deg)
+              
+  
+@keyframes moveMidleLineRev 
+          0% 
+            opacity: 0
+          25% 
+            opacity: 0
+          50% 
+            opacity: 0
+          75% 
+            opacity: 1
+          100% 
+            opacity: 1
+          
+  
+@keyframes moveBotLineRev 
+          0% 
+            transform: scale(1) translateY(0) rotate(45deg)
+          25% 
+            transform: scale(1.5) translateY(0) rotate(45deg)
+          50% 
+            transform: scale(1) translateY(0) rotate(45deg)
+          75% 
+            transform: scale(1) translateY(0) rotate(0)
+          100% 
+            transform: scale(1) translateY(10deg)
+          
+  

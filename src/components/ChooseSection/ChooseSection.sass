@@ -1,5 +1,4 @@
 .chooseSection
-  height: 100vh
   background: radial-gradient( rgb(69, 12, 224), 20px, black)
   &_title
     text-align: center
@@ -17,6 +16,11 @@
     margin-top: 90px
     display: flex
     justify-content: space-around
+    @media (max-width: 840px)
+       flex-direction: column
+       gap: 30px
+       align-items: center
+
   &_wrapper
     display: flex  
     max-width: 300px

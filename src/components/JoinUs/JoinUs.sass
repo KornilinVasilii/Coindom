@@ -10,10 +10,19 @@
     font-size: 62px
     font-family: 'Roboto Mono'
     font-weight: 900
+    @media (max-width: 840px)
+      font-size: 55px
+    @media (max-width: 620px)
+      font-size: 45px  
+    @media (max-width: 520px)
+      font-size: 40px  
   &_subtitle  
     margin-top: 20px
     margin-bottom: 100px
     opacity: 0.8
+    @media (max-width: 520px)
+      width: 80%
+      margin: 40px auto
   &_button
     padding: 15px 40px
     color: white
@@ -23,6 +32,8 @@
     font-weight: 900
     font-size: 16px
     cursor: pointer
+    @media (max-width: 520px)
+      width: 90%
   &_button:hover  
     background: white
     color: rgb(184, 9, 114)
