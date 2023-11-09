@@ -1,4 +1,6 @@
 import './main.sass'
+import { TailSpin } from "react-loader-spinner";
+import "react-loading-skeleton/dist/skeleton.css";
 import { Container } from "../Container/Container"
 import bitcoin from "../../assets/icons8-bitcoin.svg";
 import eth from "../../assets/eth.svg";
@@ -7,7 +9,7 @@ import { MarketUpdateSection } from '../MarketUpdateSection/MarketUpdateSection'
 import { ChooseSection } from '../ChooseSection/ChooseSection';
 import { JoinUas } from '../JoinUs/JoinUs';
 
-export function Main({ coins, coinsPerPage, currentCoins, paginate, currentPage }) {
+export function Main({ coins, coinsPerPage, currentCoins, paginate, currentPage,}) {
   return (
     <Container>
       <main className="main">
@@ -19,14 +21,25 @@ export function Main({ coins, coinsPerPage, currentCoins, paginate, currentPage 
             <img src={eth} alt="etherium" />
           </div>
           <h1>track and trade </h1>
-          <span>crypto currensies</span>
+          <span className="main_subtitle">crypto currensies</span>
         </div>
       </main>
       <div>
         {coins.length > 0 ? (
           <CoinCurrentPrice coins={coins} />
         ) : (
-          <div className="loading">loading...</div>
+          <div className="loading">
+            <TailSpin
+              height="80"
+              width="80"
+              color="#d142cc"
+              ariaLabel="tail-spin-loading"
+              radius="1"
+              wrapperStyle={{}}
+              wrapperClass=""
+              visible={true}
+            />
+          </div>
         )}
       </div>
       {coins.length > 0 ? (
@@ -39,7 +52,18 @@ export function Main({ coins, coinsPerPage, currentCoins, paginate, currentPage 
           paginate={paginate}
         />
       ) : (
-        <div className="loading">loading...</div>
+          <div className="loading">
+            <TailSpin
+              height="80"
+              width="80"
+              color="#d142cc"
+              ariaLabel="tail-spin-loading"
+              radius="1"
+              wrapperStyle={{}}
+              wrapperClass=""
+              visible={true}
+            />
+          </div>
       )}
       <ChooseSection />
       <JoinUas />

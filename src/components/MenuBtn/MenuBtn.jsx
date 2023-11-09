@@ -10,7 +10,7 @@ function MenuBtn({ isActive, onClick }) {
        ${isActive === false ? "unactive" : ""}
       `}
     >
-      <span className='span'></span>
+      <p></p>
     </button>
   );
 }

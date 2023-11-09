@@ -113,7 +113,7 @@ export function ChooseSection() {
                     opacity: "0.7",
                   }}
                 >
-                  Discover, collect the right crypto collections to bay or sell.
+                  Discover, collect the right crypto collections.
                 </p>
               </div>
             </div>

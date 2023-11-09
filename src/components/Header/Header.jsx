@@ -13,8 +13,12 @@ export function Header() {
       <header className="header">
         <p className="header_logo">COINDOM</p>
         {/* <Navigation /> */}
-        <nav className={`header-nav ${isOpen ? "active" : ""}`}>
-          <ul className="header-nav_list">
+        <nav
+          className={`header-nav ${isOpen ? "active" : ""}`}
+          isActive={isOpen}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <ul className="header-nav_list" onClick={() => setIsOpen(!isOpen)}>
             <a className="header-nav_link" href="">
               Home
             </a>
@@ -29,7 +33,6 @@ export function Header() {
             </a>
           </ul>
         </nav>
-
         <MenuBtn isActive={isOpen} onClick={() => setIsOpen(!isOpen)} />
         <div className="header_social_icon">
           <img src={tg} alt="telegram" width="25" height="25" />

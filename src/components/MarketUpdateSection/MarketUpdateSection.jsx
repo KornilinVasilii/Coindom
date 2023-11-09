@@ -7,7 +7,7 @@ export function MarketUpdateSection({
   coinsPerPage,
   currentCoins,
   paginate,
-  currentPage
+  currentPage,
 }) {
   return (
     <Container>

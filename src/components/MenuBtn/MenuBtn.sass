@@ -11,7 +11,7 @@
     padding: 0
     cursor: pointer
 .header__menu_btn::before,
-.header__menu_btn span,  
+.header__menu_btn p,  
 .header__menu_btn::after 
     display: block
     content: ''
@@ -34,7 +34,7 @@
 .header__menu_btn.active::before 
     animation: moveTopLine 0.4s forwards
   
-.header__menu_btn.active span 
+.header__menu_btn.active p 
     animation: moveMidleLine 0.4s forwards
   
 .header__menu_btn.active::after 
@@ -43,7 +43,7 @@
 .header__menu_btn.unactive::before 
     animation: moveTopLineRev 0.4s forwards
   
-.header__menu_btn.unactive span 
+.header__menu_btn.unactive p 
     animation: moveMidleLineRev 0.4s forwards
   
 .header__menu_btn.unactive::after 
